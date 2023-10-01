@@ -1,0 +1,350 @@
+ .detailsBanner {
+     width: 100%;
+     background-color: var(--black);
+ }
+
+ .detailsBanner .backdrop-img {
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     top: 0;
+     left: 0;
+     opacity: .1;
+     overflow: hidden;
+ }
+
+ .opacity-layer {
+     width: 100%;
+     height: 250px;
+     background: linear-gradient(180deg, rgba(4, 21, 45, 0) 0%, #04152d 79.17%);
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     top: 614px;
+ }
+
+ .detailsBanner .backdrop-img .lazy-load-image-background {
+     width: 100%;
+     height: 100%;
+     color: transparent;
+     display: inline-block;
+ }
+
+ .lazy-load-image-background.blur.lazy-load-image-loaded {
+     filter: blur(0);
+     transition: filter .3s;
+ }
+
+ .detailsBanner .backdrop-img .lazy-load-image-background img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     object-position: center;
+ }
+
+ .lazy-load-image-background.blur.lazy-load-image-loaded>img {
+     opacity: 1;
+     transition: opacity .3s;
+ }
+
+ .detailsBanner .opacity-layer {
+     width: 100%;
+     height: 250px;
+     background: linear-gradient(180deg, rgba(4, 21, 45, 0) 0%, #04152d 79.17%);
+     position: absolute;
+     bottom: 0;
+     left: 0;
+ }
+
+ .contentWrapper {
+     width: 100%;
+     max-width: 1200px;
+     margin: 0 auto;
+     padding: 0 20px;
+ }
+
+ .detailsBanner .content {
+     display: flex;
+     position: relative;
+     flex-direction: inherit;
+     gap: 25px;
+ }
+
+ .detailsBanner .content .left {
+     flex-shrink: 0;
+ }
+
+ .detailsBanner .content .right {
+     color: #fff;
+ }
+
+ .detailsBanner .content .right .subtitle {
+     font-size: 16px;
+     line-height: 24px;
+     margin-bottom: 15px;
+     font-style: italic;
+     opacity: .5;
+ }
+
+ .detailsBanner .content .right .genres {
+     margin-bottom: 25px;
+     flex-flow: row wrap;
+ }
+
+ .genres {
+     display: flex;
+     gap: 5px;
+ }
+
+ .detailsBanner .content .right .row {
+     display: flex;
+     align-items: center;
+     gap: 25px;
+     margin-bottom: 25px;
+ }
+
+ .detailsBanner .content .right .overview {
+     margin-bottom: 25px;
+ }
+
+ .detailsBanner .content .right .overview .heading {
+     font-size: 24px;
+     margin-bottom: 10px;
+ }
+
+ .detailsBanner .content .right .overview .description {
+     line-height: 24px;
+ }
+
+ .detailsBanner .content .right .info {
+     border-bottom: 1px solid rgba(255, 255, 255, .1);
+     padding: 15px 0;
+     display: flex;
+ }
+
+ .videoPopup {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+     height: 100%;
+     position: fixed;
+     top: 0;
+     left: 0;
+     opacity: 0;
+     visibility: hidden;
+     z-index: 9;
+ }
+
+ .castSection {
+     position: relative;
+     margin-bottom: 50px;
+ }
+
+ .videosSection {
+     position: relative;
+     margin-bottom: 50px;
+ }
+
+ .carousel {
+     margin-bottom: 50px;
+ }
+
+ .detailsBanner .content .left .posterImg {
+     width: 100%;
+     display: block;
+     border-radius: 12px;
+     max-width: 350px;
+ }
+
+ .adjust-padding {
+     padding: 120px 20px 23px 20px !important;
+ }
+
+ .circleRating {
+     width: 90px;
+ }
+
+ .detailsBanner .content .right .playbtn {
+     display: flex;
+     align-items: center;
+     gap: 20px;
+     cursor: pointer;
+ }
+
+ .detailsBanner .content {
+     gap: 50px;
+     flex-direction: row;
+ }
+
+ .detailsBanner .content .right .info .text {
+     margin-right: 10px;
+     opacity: .5;
+     line-height: 24px;
+ }
+
+ .detailsBanner .content .right .info .text.bold {
+     font-weight: 600;
+     opacity: 1;
+ }
+
+ .genres .genre {
+     background-color: var(--pink);
+     padding: 3px 5px;
+     font-size: 12px;
+     border-radius: 4px;
+     color: #fff;
+     white-space: nowrap;
+ }
+
+ .detailsBanner .content .right .title {
+     font-size: 34px;
+     line-height: 44px;
+ }
+
+ .detailsBanner .content .right .subtitle {
+     font-size: 20px;
+     line-height: 28px;
+ }
+
+ .detailsBanner .content .right .circleRating .CircularProgressbar-text {
+     fill: #fff !important;
+ }
+
+ .CircularProgressbar .CircularProgressbar-text {
+     fill: #3e98c7;
+     font-size: 20px;
+     text-anchor: middle;
+ }
+
+ .circleRating .CircularProgressbar-text {
+     font-size: 34px;
+     font-weight: 700;
+     fill: var(--black);
+ }
+
+ .CircularProgressbar .CircularProgressbar-path {
+     stroke: #3e98c7;
+     stroke-linecap: round;
+     -webkit-transition: stroke-dashoffset .5s ease 0s;
+     transition: stroke-dashoffset .5s ease 0s;
+     stroke: green;
+     stroke-dasharray: 289.027px, 289.027px;
+     stroke-dashoffset: 78.0372px;
+ }
+
+ .circleRating .CircularProgressbar-trail {
+     stroke: transparent;
+     stroke-dasharray: 289.027px, 289.027px;
+     stroke-dashoffset: 0px;
+ }
+
+ .circleRating {
+     border-radius: 46px;
+     box-shadow: 0px 0px 0px 2.5px;
+     border: 0px solid #041226;
+     color: #041226;
+     background-color: #041226;
+ }
+
+ .detailsBanner .content .right .playbtn .circle {
+     stroke: #fff;
+     stroke-dasharray: 650;
+     stroke-dashoffset: 1300;
+     transition: all .5s ease-in-out;
+ }
+
+ .detailsBanner .content .right .playbtn .triangle {
+     stroke-dasharray: 240;
+     stroke-dashoffset: 480;
+     stroke: #fff;
+     transform: translateY(0);
+     transition: all .7s ease-in-out;
+ }
+
+ .detailsBanner .content .right .playbtn .text {
+     font-size: 20px;
+     transition: all .7s ease-in-out;
+ }
+
+ .playbtn:hover .triangle {
+     stroke: #da2f68 !important;
+ }
+
+ .playbtn:hover .circle {
+     stroke: #da2f68 !important;
+ }
+
+ .playbtn:hover .watch-trailer-text {
+     color: #da2f68 !important;
+
+ }
+
+ .red {
+     stroke: red !important;
+ }
+
+ .orange {
+     stroke: orange !important;
+ }
+
+ .green {
+     stroke: green !important;
+ }
+
+.detailsBanner .opacity-layer {
+     width: 100%;
+     height: 250px;
+     background: linear-gradient(180deg, rgba(4, 21, 45, 0) 0%, #04152d 25.17%);
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     top: 614px;
+ }
+
+ @media (max-width: 768px) {
+    .detailsBanner .content {
+        display: block;
+    }
+    .detailsBanner .content .left .posterImg {
+        height: 300px;
+        max-width: 250px;
+    }
+    .opacity-layer-none{
+        display: none;
+    }
+    .adjust-padding {
+        padding: 95px 20px 23px 20px !important;
+    }
+    .detailsBanner .content .left {
+        display: flex !important;
+        justify-content: center !important;
+        margin-bottom: 10px;
+    }
+    .detailsBanner .content .right .title {
+        font-size: 20px;
+        line-height: 30px;
+        text-align: center;
+    }
+    .detailsBanner .content .right .subtitle {
+        font-size: 13px;
+        line-height: 24px;
+        text-align: center;
+    }
+    .detailsBanner .content .right .overview .heading {
+        font-size: 18px;
+    }
+    .detailsBanner .content .right .overview .description {
+        line-height: 20px;
+        font-size: 12px;
+    }
+    .detailsBanner .content .right .genres {
+        justify-content: center;
+    }
+    .detailsBanner .content .right .info {
+        text-align: center;
+    }
+    .detailsBanner .content .right .row {
+        justify-content: space-evenly;
+    }
+ }

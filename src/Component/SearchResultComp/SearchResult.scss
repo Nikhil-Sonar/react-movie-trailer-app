@@ -1,0 +1,39 @@
+.movie-body-container p {
+    width: 100%;
+    padding: 10px 0px 30px 0px;
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+    font-family: cursive;
+    line-height: 34px;
+}
+
+.movies-parent {
+    width: 1563px;
+}
+
+.only-movies-Render {
+    display: flex;
+    width: 100%;
+    max-width: 1270px;
+    margin: 0 auto;
+    padding: 80px 20px 40px 20px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.movies-card-alignment {
+    margin: 0px 30px 40px 0px;
+}
+
+.only-movies-discption {
+    width: 137px;
+}
+
+#root {
+    text-align: left;
+}
+
+.header-Background {
+    position: fixed;
+}

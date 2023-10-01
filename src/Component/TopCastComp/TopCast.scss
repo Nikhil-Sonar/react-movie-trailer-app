@@ -1,0 +1,69 @@
+.castSection{
+position: relative;
+    margin-bottom: 50px;
+}
+
+.content-Wrapper-Top-Cast {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.castSection .sectionHeading {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 25px;
+}
+.castSection .listItems {
+    gap: 20px;
+    overflow-y: hidden;
+    margin-right: -20px;
+    margin-left: -20px;
+    padding: 0 20px;
+}
+.castSection .listItems .listItem {
+    text-align: center;
+    color: #fff;
+}
+.castSection .listItems .listItem .profileImg {
+    width: 175px;
+    height: 175px;
+    margin-bottom: 25px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.lazy-load-image-background.blur.lazy-load-image-loaded {
+    filter: blur(0);
+    transition: filter .3s;
+    color: transparent;
+    display: inline-block;
+}
+.castSection .listItems .listItem .profileImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+.lazy-load-image-background.blur.lazy-load-image-loaded>img {
+    opacity: 1;
+    transition: opacity .3s;
+}
+.castSection .listItems .listItem .name {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+}
+.castSection .listItems .listItem .character {
+    font-size: 16px;
+    line-height: 24px;
+    opacity: .5;
+}
+
+@media (max-width: 768px) {
+    .castSection .listItems .listItem .profileImg {
+        max-width: 151px !important;
+        height: 151px !important;
+    }
+}

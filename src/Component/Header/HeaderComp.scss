@@ -1,0 +1,139 @@
+.Banner-Img {
+    width: 100%;
+}
+
+.header-Background {
+    background: rgba(0, 0, 0, .25);
+    backdrop-filter: blur(3.5px);
+    color: black;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    padding: 4px 0px;
+}
+
+.header-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-movie-icon-img {
+    height: 50px;
+    cursor: pointer;
+}
+
+.header-show-site {
+    display: flex;
+}
+
+.header-class-text-one,
+.header-class-text-two,
+.header-class-text-Search {
+    align-items: center;
+    margin: 0 15px;
+    color: #fff;
+    font-weight: 500;
+    position: relative;
+    cursor: pointer;
+}
+
+.header-class-text-Search svg {
+    color: #fff;
+}
+
+.header-class-text-Search:hover svg {
+    color: #da2f68;
+}
+
+.searchBar {
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    position: absolute;
+    top: 60px;
+    animation: mobileMenu .3s ease forwards;
+}
+
+.Search-icon-click {
+    height: 60px;
+    font-size: 20px;
+    padding: 0 30px;
+    width: 100%;
+    background-color: #fff;
+    outline: 0;
+    border: 0;
+    border-radius: 30px 0 0 30px;
+}
+
+.searchBar .searchInput svg {
+    font-size: 20px;
+    flex-shrink: 0;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.searchBar .searchInput {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.d-none {
+    display: none;
+}
+
+.d-none-remove {
+    display: block !important;
+}
+
+.header-class-text-one a,
+.header-class-text-two a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.header-class-text-one a:hover,
+.header-class-text-two a:hover {
+    color: #da2f68;
+}
+
+@media (max-width:768px) {
+    .header-movie-icon-img {
+        height: 40px;
+        cursor: pointer;
+    }
+
+.header-class-text-one,
+.header-class-text-two,
+.header-class-text-Search {
+    margin: 0 10px;
+}
+
+.searchBar .searchInput {
+    margin-top: 0px;
+    height: 38px;
+}
+.searchBar {
+    height: 38px; 
+}
+.Search-icon-click {
+    height: 25px;
+    font-size: 16px;
+}
+.header-Background {
+    max-width: 768px; 
+}
+.only-movies-Render {
+    width: 100%;
+    max-width: 768px;
+    justify-content: start;
+}
+
+}

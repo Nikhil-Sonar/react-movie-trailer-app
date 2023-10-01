@@ -1,0 +1,74 @@
+.videosSection {
+    position: relative;
+    margin-bottom: 50px;
+}
+.contentWrapper-OfficialVideos {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.videosSection .sectionHeading {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 25px;
+}
+.videosSection .videos {
+    overflow-x: auto;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+.videosSection .videos .videoItem {
+    width: 25%;
+}
+.videosSection .videos .videoItem {
+    flex-shrink: 0;
+    cursor: pointer;
+}
+.videosSection .videos .videoItem .videoThumbnail {
+    margin-bottom: 15px;
+    position: relative;
+}
+.videosSection .videos .videoItem .videoTitle {
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+}
+.lazy-load-image-background.blur.lazy-load-image-loaded {
+    filter: blur(0);
+    transition: filter .3s;
+    color: transparent;
+    display: inline-block;
+}
+.videosSection .videos .videoItem .videoThumbnail svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50px;
+    height: 50px;
+}
+.videosSection .videos .videoItem .videoThumbnail .triangle {
+    stroke-dasharray: 240;
+    stroke-dashoffset: 480;
+    stroke: #fff;
+    transform: translateY(0);
+    transition: all .7s ease-in-out;
+}
+.videosSection .videos .videoItem .videoThumbnail .circle {
+    stroke: #fff;
+    stroke-dasharray: 650;
+    stroke-dashoffset: 1300;
+    transition: all .5s ease-in-out;
+}
+.videosSection .videos .videoItem .videoThumbnail img {
+    width: 95%;
+    display: block;
+    border-radius: 12px;
+    transition: all .7s ease-in-out;
+}
+.videosSection .videos .videoItem .videoThumbnail {
+    margin-bottom: 15px;
+    position: relative;
+}
