@@ -39,6 +39,7 @@ function SimilarVideosRenderData(props) {
         ],
     };
 
+if(Similarcards.length != 0){
     return (
         <>
             <div className="movie-body">
@@ -84,6 +85,11 @@ function SimilarVideosRenderData(props) {
             </div>
         </>
     )
+}else{
+    return(
+      <div></div>
+    )
+  }
 }
 
 export default SimilarVideosRenderData;

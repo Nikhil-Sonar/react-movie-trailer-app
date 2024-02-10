@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 import "D:/nikhil sonar/NIKHIL SONAR BACKUP/Nodejsprac/MovieBuzzz/src/Component/Header/HeaderComp.scss";
-import movieIcon from "D:/nikhil sonar/NIKHIL SONAR BACKUP/Nodejsprac/MovieBuzzz/src/assets/movix-logo.svg";
+import movieIcon from "D:/nikhil sonar/NIKHIL SONAR BACKUP/Nodejsprac/MovieBuzzz/src/assets/play.png";
 import SearchResultDataRender from '../SearchResultComp/SearchResult'
 
 export function MovieHeaderComp() {
@@ -25,8 +25,9 @@ export function MovieHeaderComp() {
             <div className="header-Background">
                 <div className="header-container">
                     <div className="header-movie-icon">
-                        <a href="/">
+                        <a href="/" className="header-icon-txt">
                             <img className="header-movie-icon-img" src={movieIcon} alt="" />
+                            <span className="header-logo-txt">MBuzzz</span>
                         </a>
                     </div>
                     <div className="header-show-site">

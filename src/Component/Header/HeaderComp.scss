@@ -104,6 +104,18 @@
     color: #da2f68;
 }
 
+.header-icon-txt{
+    text-decoration: none;
+    display: flex;
+}
+
+.header-logo-txt{
+    color: #f9437f;
+    font-size: 32px;
+    font-weight: 600;
+    margin: 9px 0px 0px 5px;
+}
+
 @media (max-width:768px) {
     .header-movie-icon-img {
         height: 40px;
@@ -136,4 +148,7 @@
     justify-content: start;
 }
 
+.header-logo-txt{
+    font-size: 25px;
+}
 }
