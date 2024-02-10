@@ -12,7 +12,7 @@ function WatchShowsRender(props) {
     if (props.dataPut != "") {
         const Hours = Math.floor((props.dataPut.runtime || `${(props.dataPut.episode_run_time.length > 0 ? props.dataPut.episode_run_time[0] : props.dataPut.episode_run_time )}`) /60);
         const minutes = (props.dataPut.runtime || props.dataPut.episode_run_time) % 60;
-        const calHrMin = `${Hours}h ${(minutes == NaN) ? "0" : minutes}m`
+        const calHrMin = `${Hours}h ${isNaN(minutes) ? "0" : minutes}m`
         return (
             <>
             <div className="detailsBanner">
