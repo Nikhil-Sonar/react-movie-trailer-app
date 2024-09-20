@@ -4,12 +4,13 @@ import '../MoviesPageComp/MoviesDataRender.scss'
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import { NavLink } from "react-router-dom";
+import SkeletonLoader from "../Skelton/Skelton";
 import NoPosterImage from "D:/nikhil sonar/NIKHIL SONAR BACKUP/Nodejsprac/MovieBuzzz/src/assets/no-poster.png"
 
 function OnlyMoviesData() {
     const [cards, setCards] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
-    const [page, setPage] = useState(1);
+    const [Moviepage, setPage] = useState(1);
 
     const moviesscrollDataRender = (props) => {
         const reqObj = {
@@ -42,14 +43,14 @@ function OnlyMoviesData() {
             return;
         } else {
             return (
-                moviesscrollDataRender(page)
+                moviesscrollDataRender(Moviepage)
             )
         }
     };
 
     useEffect(() => {
         return (
-            moviesscrollDataRender(page)
+            moviesscrollDataRender(Moviepage)
         )
     }, [])
 
@@ -57,6 +58,14 @@ function OnlyMoviesData() {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, [isLoading]);
+
+    if(!isLoading && Moviepage == "1"){
+        return (
+            <>
+              <SkeletonLoader value={ {id:20, scrollTop:"Y"}}/>
+            </>
+        )
+    }
 
     return (
         <div className="movies-parent">

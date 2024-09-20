@@ -65,12 +65,13 @@ export function MovieHeaderComp() {
                         <div class="searchInput">
                             <input
                                 className="Search-icon-click"
-                                onKeyUp={(e)=> {
+                                onKeyUp={(e) => {
                                     setCountHeaderSearchText(e.target.value);
                                     if (e.key === "Enter") {
-                                        <NavLink to={`/search/${countHeaderSearchText}`}></NavLink>
+                                        <NavLink to={`#/search/${countHeaderSearchText}`}></NavLink>
                                         localStorage.setItem("searchText", countHeaderSearchText);
-                                        window.location.href = `/search/${countHeaderSearchText}`
+                                        window.location.href = `#/search/${countHeaderSearchText}`
+                                        searchCardRemove();
                                     }
                                 }}
                                 autoFocus

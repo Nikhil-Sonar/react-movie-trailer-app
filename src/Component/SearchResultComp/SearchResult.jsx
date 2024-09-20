@@ -4,13 +4,15 @@ import "../SearchResultComp/SearchResult.scss"
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import { NavLink } from "react-router-dom";
+import SkeletonLoader from "../Skelton/Skelton";
 import NoPosterImage from "D:/nikhil sonar/NIKHIL SONAR BACKUP/Nodejsprac/MovieBuzzz/src/assets/no-poster.png"
 
 function SearchResultDataRender() {
     const [cards, setCards] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
-    const [page, setPage] = useState(1);
-    const SearchIdFetch = JSON.stringify(localStorage.getItem('searchText'));
+    const [searchPage, setPage] = useState(1);  
+
+    var SearchIdFetch = JSON.stringify(localStorage.getItem('searchText'));
     const moviesscrollDataRender = (props) => {
         const reqObj = {
             method: 'GET',
@@ -21,7 +23,6 @@ function SearchResultDataRender() {
                 Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiOWY5N2E2MzQzYzBjMjgyNDQ4YTdkYWExZDQwY2M1MyIsInN1YiI6IjY0OTg1NmIxNmY0M2VjMDBjNWM2YmE4MSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.3R336RwLQnC8JwPmui9juyhl260VJWmQpg36kXVCH4s'
             }
         };
-
 
         setIsLoading(true)
         axios.request(reqObj)
@@ -42,21 +43,29 @@ function SearchResultDataRender() {
             return;
         } else {
             return (
-                moviesscrollDataRender(page)
+                moviesscrollDataRender(searchPage)
             )
         }
     };
 
     useEffect(() => {
         return (
-            moviesscrollDataRender(page)
+            moviesscrollDataRender(searchPage)
         )
-    }, [])
+    }, [SearchIdFetch])
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, [isLoading]);
+
+    if(!isLoading && searchPage == "1" && cards == ""){
+        return (
+            <>
+              <SkeletonLoader value={ {id:20, scrollTop:"Y"}}/>
+            </>
+        )
+    }
 
       return (
         <div className="movies-parent">

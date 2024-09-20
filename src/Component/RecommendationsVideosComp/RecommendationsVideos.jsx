@@ -52,7 +52,7 @@ function RecommendationVideosRenderData(props) {
                             {Recommendationcards.length > 0 && Recommendationcards.map(elem => {
                                 return (
                                     <NavLink to={`/${elem.id}/${props.datatypeval}`}>
-                                        <div onClick={<moviedataApiCall />} className="movie-body-container-trending-parent">
+                                        <div className="movie-body-container-trending-parent">
                                             <div className="movie-body-container-trending-parent-card">
                                                 <div className="movie-body-container-trending-parent-card-banner">
                                                     <img className="movie-body-container-trending-parent-card-banner-img" src={elem.poster_path == null ? NoPosterImage : `https://image.tmdb.org/t/p/original${elem.poster_path}`}></img>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import '../MovieComp/MovieData.scss'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -52,8 +52,8 @@ if(Similarcards.length != 0){
                     <Slider {...sliderSettings}>
                         {Similarcards.length > 0 && Similarcards.map(elem => {
                             return (
-                                <NavLink to={`/${elem.id}/${props.datatypeval}`}>
-                                    <div onClick={<moviedataApiCall/>} className="movie-body-container-trending-parent">
+                                <NavLink to={`/${elem.id}/${props.datatypeval}`} onClick={() => console.log(`Navigating to /${elem.id}/${props.datatypeval}`)}>
+                                    <div className="movie-body-container-trending-parent">
                                         <div className="movie-body-container-trending-parent-card">
                                             <div className="movie-body-container-trending-parent-card-banner">
                                                 <img className="movie-body-container-trending-parent-card-banner-img" src={elem.poster_path == null ? NoPosterImage :`https://image.tmdb.org/t/p/original${elem.poster_path}`}></img>

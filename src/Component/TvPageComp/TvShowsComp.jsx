@@ -4,12 +4,13 @@ import '../MoviesPageComp/MoviesDataRender.scss'
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import { NavLink } from "react-router-dom";
+import SkeletonLoader from "../Skelton/Skelton";
 import NoPosterImage from "D:/nikhil sonar/NIKHIL SONAR BACKUP/Nodejsprac/MovieBuzzz/src/assets/no-poster.png"
 
 function OnlyTvShowsData() {
     const [cards, setCards] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
-    const [page, setPage] = useState(1);
+    const [Tvpage, setPage] = useState(1);
 
     const TVShowScrollDataRender = (props) => {
         const reqObj = {
@@ -21,7 +22,6 @@ function OnlyTvShowsData() {
                 Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiOWY5N2E2MzQzYzBjMjgyNDQ4YTdkYWExZDQwY2M1MyIsInN1YiI6IjY0OTg1NmIxNmY0M2VjMDBjNWM2YmE4MSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.3R336RwLQnC8JwPmui9juyhl260VJWmQpg36kXVCH4s'
             }
         };
-
 
         setIsLoading(true)
         axios.request(reqObj)
@@ -42,14 +42,14 @@ function OnlyTvShowsData() {
             return;
         } else {
             return (
-                TVShowScrollDataRender(page)
+                TVShowScrollDataRender(Tvpage)
             )
         }
     };
 
     useEffect(() => {
         return (
-            TVShowScrollDataRender(page)
+            TVShowScrollDataRender(Tvpage)
         )
     }, [])
 
@@ -57,6 +57,14 @@ function OnlyTvShowsData() {
         window.addEventListener('scroll', handleScrollTv);
         return () => window.removeEventListener('scroll', handleScrollTv);
     }, [isLoading]);
+
+    if(!isLoading && Tvpage == "1"){
+        return (
+            <>
+              <SkeletonLoader value={ {id:20, scrollTop:"Y"}}/>
+            </>
+        )
+    }
 
     return (
         <div className="movies-parent">

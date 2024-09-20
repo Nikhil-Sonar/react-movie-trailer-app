@@ -35,7 +35,7 @@ function BannerdynamicComp(props) {
                         <div className="Banner-Img-container-search">
                             <input onKeyUp={keyupEventCount} autoFocus type="search" placeholder="Search for a movie or tv show...." />
                             <button><NavLink className="Search-btn-text" to={`/search/${serchResult}`}>Search</NavLink></button>
-                        </div>
+                        </div> 
                     </div>
                 </div>
             </div>

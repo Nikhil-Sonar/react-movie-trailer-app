@@ -8,7 +8,6 @@ import { TopRatedApiCall } from "D:/nikhil sonar/NIKHIL SONAR BACKUP/Nodejsprac/
 
 
 // import MovieDynamicRenderData from "../MovieComp/MovieData"
-
 export function MovieOneHeader() {
     const [showCards, setShowCards] = useState({
         countOneColor: 'Common-trending-Btn',

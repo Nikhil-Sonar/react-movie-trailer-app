@@ -5,7 +5,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import NoPosterImage from "D:/nikhil sonar/NIKHIL SONAR BACKUP/Nodejsprac/MovieBuzzz/src/assets/no-poster.png"
 
 function MovieDynamicRenderData(props) {
@@ -42,7 +42,7 @@ function MovieDynamicRenderData(props) {
                     slidesToShow: 2,
                     slidesToScroll: 1,
                     speed: 1200,
-                    arrows:false
+                    arrows: false
                 },
             },
         ],
@@ -54,7 +54,7 @@ function MovieDynamicRenderData(props) {
                 <Slider {...sliderSettings}>
                     {cards.length > 0 && cards.map(elem => {
                         return (
-                            <NavLink to={`/${elem.id}/${props.datatypeval}`} >
+                            <Link to={`${elem.id}/${props.datatypeval}`} >
                                 <div key={elem.id} className="movie-body-container-trending-parent">
                                     <div className="movie-body-container-trending-parent-card">
                                         <div className="movie-body-container-trending-parent-card-banner">
@@ -79,7 +79,7 @@ function MovieDynamicRenderData(props) {
                                         </div>
                                     </div>
                                 </div>
-                            </NavLink>
+                            </Link>
                         )
                     })}
                 </Slider>
