@@ -2,7 +2,6 @@ import React,{useEffect} from 'react';
 import './Skelton.scss';
 
 function SkeletonLoader(props) {
-    debugger
     if(props.value.scrollTop == "Y"){
         useEffect(() => {
             window.scrollTo(0, 0);
