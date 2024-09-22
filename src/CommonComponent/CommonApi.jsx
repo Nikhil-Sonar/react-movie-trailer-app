@@ -16,6 +16,7 @@ import bannerImage from "D:/nikhil sonar/NIKHIL SONAR BACKUP/Nodejsprac/MovieBuz
 export function DynamicBannerImgApiCall() {
     const [CountArrayDynamicBanner, SetCountArrayDynamicBanner] = useState([]);
     const { type, id } = useParams();
+    const [loading, setLoading] = useState(false);
 
     const reqObj = {
         method: 'GET',
@@ -31,17 +32,23 @@ export function DynamicBannerImgApiCall() {
             axios.request(reqObj)
                 .then(function (response) {
                     if (response.status == 200) {
+                        setLoading(true);
                         const dataArrayObj = response.data;
                         SetCountArrayDynamicBanner(dataArrayObj);
                     }
                 })
                 .catch(function (error) {
+                    setLoading(true);
                     console.log(error)
                 });
         } catch (error) {
             console.log(error)
         }
     }, [])
+
+    if (!loading) {
+        return <SkeletonLoader value={ {id:20, scrollTop:"N"}}/>
+    }
 
     if ((CountArrayDynamicBanner != "") && (CountArrayDynamicBanner != undefined)) {
         return (
